@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/myHomePage.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -75,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
               onPressed: () {
                 showMessage();
               },
-              icon: const Icon(Icons.visibility),
+              icon: obs?Icon(Icons.visibility_off):Icon(Icons.visibility),
             )),
       ),
     );
@@ -83,13 +84,21 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget LoginButton() {
     return SizedBox(
-      width: 100,
+      width: 150,
       height: 50,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+        
+        Navigator.of(context).pop();
+        MaterialPageRoute route =MaterialPageRoute(builder: (c)=>myHomePage());
+        Navigator.of(context).push(route);
+        },
         child: Text(
           "Login",
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.white,
+          fontWeight: FontWeight.bold,
+            fontSize: 28.0,),
+          
         ),
         style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
       ),

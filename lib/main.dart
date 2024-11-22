@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/myHomePage.dart';
+import 'package:myapp/screen/LoginPage.dart';
 
 void main(){
   runApp(const myapp());
@@ -34,7 +34,7 @@ class myapp extends StatelessWidget {
 
 
 
-      home: const myHomePage(),
+      home: const LoginPage(),
     );
   }
 }

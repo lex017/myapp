@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/CardMember.dart';
 import 'package:myapp/MessagePage.dart';
 import 'package:myapp/ServicePage.dart';
 import 'package:myapp/SettingPage.dart';
 import 'package:myapp/drawer_menu.dart';
-import 'package:myapp/screen/LoginPage.dart';
+
 
 List items=[
 
 ];
 
 const List screenPage=[
-  LoginPage(),
+  CardMember(),
   MessagePage(),
   SettingPage(),
   ServicePage()
@@ -25,7 +26,7 @@ class myHomePage extends StatefulWidget {
 }
 
 class _myHomePageState extends State<myHomePage> {
-  int selectidx = 0;
+  int selectidx = 1;
 
   void onTabTapped(int idx){
     setState(() {
